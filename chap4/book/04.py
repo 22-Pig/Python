@@ -1,13 +1,17 @@
 m, n = map(int, input().split())
-count = 0
-s = 0
-for num in range(m, n + 1):
-    # 素数大于 1
-    if num > 1:
-        for i in range(2, num):
-            if (num % i) == 0:
+sum = 0
+if m > n:
+    m, n = n, m
+for i in range(m, n + 1):
+    if i != 1:
+        for j in range(2, i):
+            if i % j == 0:
                 break
+            else:
+                pass
         else:
-            count += 1
-            s += num
-print(count, s)
+            sum += i
+if sum == 0:
+    print('not have prime!')
+else:
+    print(sum)
