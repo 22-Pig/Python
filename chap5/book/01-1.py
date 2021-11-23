@@ -23,6 +23,9 @@ while True:
         studentid[words[0]] = words[1]
 # 列出全部课程
 coursename = list(course)
+# 按键排序
+m = sorted(studentid.items(), key=lambda x: x[0], reverse=False)
+studentid = dict(m)
 # 打印表头
 print(',', end='')
 for name in coursename:
