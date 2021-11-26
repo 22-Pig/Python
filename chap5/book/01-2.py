@@ -41,3 +41,25 @@ for id in studentid.keys():
             sum += int(score[name])  # 加入总分
             cnt += 1  # 课程数+1
     print(',' + str(int(sum / cnt)))  # 输出平均分
+
+print(',', end='')
+
+# 收集每门课学生的总数
+# {'课程1':m,'课程2',n}
+courseStudent = {}
+
+# 收集每门课学生的总分
+# {'课程1':200,'课程2',200}
+coursePoint = {}
+
+for i in studentscore.values():
+    for key, value in i.items():
+        if key in courseStudent.keys():
+            courseStudent[key] += 1
+            coursePoint[key] += int(value)
+        else:
+            courseStudent[key] = 1
+            coursePoint[key] = int(value)
+
+for i in courseStudent.keys():
+    print(',', str(coursePoint[i] / courseStudent[i]), end='')
