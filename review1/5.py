@@ -1,0 +1,5 @@
+y = int(input())
+m = int(input())
+d = int(input())
+y, m, d = str(y), str(m), str(d)
+print(y + "-" + m + "-" + d)
