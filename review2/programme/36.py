@@ -1,3 +1,10 @@
-n = int(input())
-for i in range(n + 1):
-    print("pow(3,%d) =" % i, pow(3, i))
+m, n = map(int, input().split())
+s = []
+l = []
+for i in range(m):
+    s.append([i for i in input().split()])
+for j in range(n):
+    for i in range(m):
+        l.append(s[i][j])
+    print(' '.join(l))
+    l = []
