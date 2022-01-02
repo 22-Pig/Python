@@ -1,11 +1,9 @@
-m = str(input())
-n = eval(m[1:])
-value = 0
-if (m[0] == '$'):
-    value = n * 7
-    print('￥{:.2f}'.format(value))
-elif (m[0] == '￥'):
-    value = n / 7
-    print('${:.2f}'.format(value))
-else:
-    print('输入格式错误')
+s = input()
+s = tuple(s)
+m = s[0]
+index = 0
+for i in range(1, len(s)):
+    if s[i] >= m:
+        m = s[i]
+        index = i
+print('%c   %d' % (m, index))

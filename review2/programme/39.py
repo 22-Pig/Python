@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def triangle():
     N = [1]
     while True:
@@ -22,3 +23,9 @@ def print_triangle(x):
 
 num = int(input())
 print_triangle(num)
+=======
+n = int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        
+>>>>>>> 4d0cc0186e62cea2072127df4b846abba88a58b9

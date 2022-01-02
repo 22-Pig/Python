@@ -1,9 +1,7 @@
-a = int(input())
-if (a < 0):
-    print("Invalid Value!")
-elif (a <= 50):
-    cost = a * 0.53
-    print("cost = {:.2f}".format(cost))
-else:
-    cost = 50 * 0.53 + (a - 50) * 0.58
-    print("cost = {:.2f}".format(cost))
+a = input()
+b = input()
+count = 0
+for i in a:
+    if b == i:
+        count += 1
+print(count)
