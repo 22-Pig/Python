@@ -1,6 +1,14 @@
-x = eval(input())
-if x == 0:
-    res = 0
-else:
-    res = 1 / x
-print('f({:.1f}) = {:.1f}'.format(x, res))
+n = int(input())
+num = 0
+sum = 0
+for i in range(n):
+    dic = eval(input())
+    # eval函数在这里就是说明dic接收的是一个字典
+    # print(dic)
+    for j in dic:
+        temp = dic[j]
+        for key in temp:
+            # 计算边数和边总长度
+            num += 1
+            sum += temp[key]
+print(n, num, sum)

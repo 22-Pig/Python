@@ -1,12 +1,13 @@
-n = int(input())
-sum = 0
-a = 1
-b = 1
-for i in range(n):
-    if a % 2 == 0:
-        sum -= a / b
+a = input()
+b = list(map(int, input().split()))
+c = {}
+b.sort()
+for i in b:
+    if i not in c:
+        c[i] = 1
     else:
-        sum += a / b
-    a += 1
-    b += 2
-print("%.3f" % sum)
+        c[i] += 1
+sorted(c)
+for i in c.keys():
+    print(i, end=":")
+    print(c[i])

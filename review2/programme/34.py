@@ -1,5 +1,9 @@
-m = float(input())
-if (m <= 15):
-    print("{:.2f}".format((4 * m) / 3))
-else:
-    print("{:.2f}".format(2.5 * m - 17.5))
+a, b = map(int, input().split())
+if a < 0 and b < 0:
+    print('-_-')
+elif a + b > 0:
+    print(max(a, b), a + b)
+    print('^_^')
+elif a + b < 0:
+    print(max(a, b), '0')
+    print('T_T')

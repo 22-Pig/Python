@@ -1,13 +1,8 @@
-n = int(input())
-if n == 0:
-    print("average = 0.0")
-    print("count = 0")
-    exit(0)
-num = list(map(int, input().split()))
-s, count = 0, 0
-for i in num:
-    s += i
-    if i >= 60:
-        count += 1
-print("average = %.1f" % (s / n))
-print("count = %d" % count)
+lst = [0, 34, 6, 0, 7, 0, 9]
+n = 0
+for i in lst:
+    if i == 0:
+        lst.remove(i)
+        print(lst)
+        n += 1
+print(n)
